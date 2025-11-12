@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ImArrowUpRight2 } from "react-icons/im";
 // Import du CSS
-import "../components/style/liens.css"; 
+import "../components/style/Liens.css"; 
 
 function Liens() {
     const { t, i18n } = useTranslation();

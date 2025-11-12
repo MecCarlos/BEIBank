@@ -6,7 +6,7 @@ import i1 from "../assets/image/i1.jpg";
 import i2 from "../assets/image/i2.jpg"; 
 import i3 from "../assets/image/i5.jpg"; 
 // Import du CSS
-import "../components/style/carousel3.css"; 
+import "../components/style/Carousel3.css"; 
 
 function Carousel3() {
     const { t, i18n } = useTranslation();

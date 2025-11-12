@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import "../components/style/femme.css"; 
+import "../components/style/Femme.css"; 
 import joy from "../assets/image/femme.png"; 
 import RippleButton from './RippleButton';
 import { GiWorld } from "react-icons/gi";

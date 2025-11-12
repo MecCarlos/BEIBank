@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import "../components/style/team.css"; 
+import "../components/style/Team.css"; 
 import { CgTimer } from "react-icons/cg";
 import { GiWallet } from "react-icons/gi";
 import { BsCalculator } from "react-icons/bs";

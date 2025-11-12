@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import "../components/style/Groupe.css"; 
-import { FaUserGroup } from "react-icons/fa6";
 import groupe from "../assets/image/groupe2.png";
 
 function Groupe() {

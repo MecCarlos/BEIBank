@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ImArrowUpRight2 } from "react-icons/im";
-import "../components/style/carousel4.css";
+import "../components/style/Carousel4.css";
 // Import des images
 import i1 from "../assets/image/i1.jpg"; 
 import i2 from "../assets/image/i2.jpg"; 

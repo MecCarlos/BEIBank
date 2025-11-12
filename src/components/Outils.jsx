@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaMobileAlt, FaUsers, FaLightbulb } from "react-icons/fa";
 // Import du CSS
-import "../components/style/outil.css"; 
+import "../components/style/Outil.css"; 
 
 function Outil() {
     const { t, i18n } = useTranslation();

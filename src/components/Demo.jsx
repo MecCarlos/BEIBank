@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import "../components/style/demo.css"; 
+import "../components/style/Demo.css"; 
 import RippleButton from './RippleButton';
 import demo1 from "../assets/image/phone.png";
 import demo2 from "../assets/image/phone2.png";
