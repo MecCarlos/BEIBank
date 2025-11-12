@@ -1,0 +1,355 @@
+/* carousel3.css - STYLE SPÉCIFIQUE AU COMPOSANT carousel3 */
+
+/* Couleurs de base */
+:root {
+    --carousel3-navy: #000080; 
+    --carousel3-white: #ffffff;
+    --carousel3-text: #333333;
+    --carousel3-gap-size: 30px;
+    --carousel3-card-radius: 20px;
+    --carousel3-transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --carousel3-transition-fast: 0.3s ease;
+}
+
+/* --- Conteneur principal --- */
+.carousel3-container {
+    padding: 80px 4rem; 
+    max-width: 1800px;
+    margin: 0 auto; 
+    text-align: center;
+    background: white;
+}
+
+.carousel3-header { 
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel3-h3 {
+    color: var(--carousel3-navy);
+    font-weight: bold;
+    font-size: 3.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.carousel3-h5 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #666;
+    line-height: 1.6;
+}
+
+.carousel3-text-highlight {
+    color: #000080;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* --- Grille des 3 cartes --- */
+.carousel3-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--carousel3-gap-size);
+    align-items: stretch;
+    margin-top: 2rem;
+}
+
+/* --- Style des cartes avec effet hover avancé --- */
+.carousel3-promo-card {
+    position: relative;
+    background: transparent;
+    border-radius: var(--carousel3-card-radius);
+    text-align: left;
+    overflow: hidden;
+    transition: all var(--carousel3-transition-slow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 128, 0.08);
+}
+
+/* Container d'image avec overlay */
+.carousel3-card-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.carousel3-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all var(--carousel3-transition-slow);
+    transform: scale(1.05);
+}
+
+.carousel3-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all var(--carousel3-transition-slow);
+    mix-blend-mode: multiply;
+}
+
+/* Zone de texte */
+.carousel3-text-zone { 
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    background: white;
+}
+
+.carousel3-text-zone h4 { 
+    color: var(--carousel3-navy);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.3;
+    transition: all var(--carousel3-transition-fast);
+}
+
+.carousel3-text-zone p {   
+    color: #666;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    flex: 1;
+    transition: all var(--carousel3-transition-fast);
+}
+
+/* Bouton discover */
+.carousel3-discover-btn { 
+    border: none;
+    color: var(--carousel3-navy);
+    background: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all var(--carousel3-transition-fast);
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.1s;
+    cursor: pointer;
+}
+
+.carousel3-discover-btn .carousel3-fleche {
+    transition: transform var(--carousel3-transition-fast);
+}
+
+.carousel3-discover-btn:hover .carousel3-fleche {
+    transform: translate(3px, -3px);
+}
+
+/* Effet hover avancé */
+.carousel3-card-hover-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+    transition: left var(--carousel3-transition-slow);
+    z-index: 3;
+}
+
+/* --- ÉTATS HOVER --- */
+.carousel3-promo-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: transparent;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 128, 0.15),
+        0 15px 35px rgba(0, 0, 128, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.carousel3-promo-card:hover .carousel3-card-image {
+    transform: scale(1.15);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+.carousel3-promo-card:hover .carousel3-card-overlay {
+    opacity: 0.3;
+}
+
+.carousel3-promo-card:hover .carousel3-card-hover-effect {
+    left: 100%;
+}
+
+.carousel3-promo-card:hover .carousel3-text-zone h4 {
+    color: #1a1a8a;
+    transform: translateX(5px);
+}
+
+.carousel3-promo-card:hover .carousel3-text-zone p {
+    color: #555;
+    transform: translateX(3px);
+}
+
+.carousel3-promo-card:hover .carousel3-discover-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet de brillance au survol */
+.carousel3-promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 0, 128, 0.3), 
+        transparent);
+    opacity: 0;
+    transition: opacity var(--carousel3-transition-fast);
+    z-index: 4;
+}
+
+.carousel3-promo-card:hover::before {
+    opacity: 1;
+}
+
+/* --- MEDIA QUERIES SPÉCIFIQUES --- */
+@media (max-width: 1200px) {
+    .carousel3-container {
+        padding: 80px 2rem;
+    }
+    
+    .carousel3-h3 {
+        font-size: 2.9rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel3-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .carousel3-h3 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel3-container {
+        padding: 60px 1.5rem;
+    }
+    
+    .carousel3-h3 { 
+        font-size: 2.2rem; 
+    }
+    
+    .carousel3-h5 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel3-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+    }
+    
+    .carousel3-card-image-container {
+        height: 220px;
+    }
+    
+    .carousel3-text-zone {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .carousel3-container {
+        padding: 50px 1rem;
+    }
+    
+    .carousel3-h3 { 
+        font-size: 2rem; 
+    }
+    
+    .carousel3-h5 {
+        font-size: 1.05rem;
+    }
+    
+    .carousel3-text-zone h4 {
+        font-size: 1.3rem;
+    }
+    
+    .carousel3-text-zone p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel3-container {
+        padding: 40px 1rem;
+    }
+    
+    .carousel3-h3 { 
+        font-size: 1.8rem; 
+    }
+    
+    .carousel3-h5 {
+        font-size: 1rem;
+    }
+    
+    .carousel3-text-zone {
+        padding: 1.25rem;
+    }
+    
+    .carousel3-text-zone h4 {
+        font-size: 1.2rem;
+    }
+    
+    .carousel3-text-zone p {
+        font-size: 0.95rem;
+    }
+    
+    .carousel3-card-image-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .carousel3-container {
+        padding: 30px 0.8rem;
+    }
+    
+    .carousel3-h3 { 
+        font-size: 1.6rem; 
+    }
+    
+    .carousel3-text-zone {
+        padding: 1rem;
+    }
+    
+    .carousel3-discover-btn {
+        font-size: 0.9rem;
+    }
+}

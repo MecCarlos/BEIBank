@@ -1,0 +1,381 @@
+/* Blue.css - STYLE SPÉCIFIQUE AU COMPOSANT BLUE */
+
+/* Couleurs de base pour la section bleue */
+:root {
+    --blue-navy: #000080; 
+    --blue-primary: #007bff; 
+    --blue-white: #ffffff;
+    --blue-text: #333333;
+    --blue-gray-light: #f5f5f5;
+    --blue-gap-grid: 30px; 
+}
+
+/* --- 1. Conteneur principal et Titres --- */
+
+.blue-container {
+    padding: 6rem 5rem; 
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--blue-navy);
+}
+
+.blue-header {
+    margin-bottom: 4rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.blue-h3 {
+    color: whitesmoke;
+    padding: 2px 7px;
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.blue-h5 {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: whitesmoke;
+}
+
+.blue-text-highlight {
+    color: whitesmoke;
+    font-style: normal;
+}
+
+/* --- 2. Grille des services (2 lignes de 3) --- */
+
+.blue-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: var(--blue-gap-grid); 
+    align-items: stretch;
+}
+
+/* --- 3. Style des boîtes de service --- */
+
+.blue-service-card {
+    background: var(--blue-white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    cursor: default;
+}
+
+.blue-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blue-service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.blue-service-icon {
+    font-size: 2rem; 
+    color: var(--blue-navy);
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.blue-service-card:hover .blue-service-icon {
+    transform: scale(1.1);
+}
+
+.blue-service-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blue-navy);
+    margin: 0;
+    flex: 1;
+}
+
+.blue-service-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* --- 4. CTA Final --- */
+
+.blue-cta-final {
+    color: var(--blue-white);
+    padding: 40px 20px;
+    margin-top: 10px;
+    border-radius: 15px;
+    text-align: center;
+    background: var(--blue-white);
+}
+
+.blue-cta-final h3 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-size: 2.5rem;
+    color: var(--blue-navy);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Conteneur des boutons CTA */
+.blue-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.blue-cta-buttons .cta-primary {
+    background: var(--blue-primary);
+    color: var(--blue-white);
+    border: 2px solid var(--blue-primary);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    text-align: center;
+}
+
+.blue-cta-buttons .cta-primary:hover {
+    background: #0069d9;
+    border-color: #0062cc;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.blue-cta-buttons .cta-secondary {
+    background: var(--blue-white);
+    color: var(--blue-navy);
+    border: 2px solid var(--blue-navy);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    text-align: center;
+}
+
+.blue-cta-buttons .cta-secondary:hover {
+    color: var(--blue-white); 
+    background: var(--blue-navy); 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 128, 0.3);
+}
+
+/* --- 5. Responsive Amélioré --- */
+
+@media (max-width: 1200px) {
+    .blue-h3 {
+        font-size: 3.2rem;
+    }
+    
+    .blue-container {
+        padding: 5rem 3rem;
+    }
+    
+    .blue-cta-buttons {
+        gap: 15px;
+    }
+    
+    .blue-cta-buttons .cta-primary,
+    .blue-cta-buttons .cta-secondary {
+        min-width: 180px;
+        padding: 14px 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .blue-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .blue-h3 {
+        font-size: 2.8rem;
+    }
+    
+    .blue-container {
+        padding: 4rem 2rem;
+    }
+    
+    .blue-cta-final {
+        margin-top: 4rem;
+        padding: 30px 15px;
+    }
+    
+    .blue-cta-final h3 {
+        font-size: 2rem;
+    }
+    
+    .blue-cta-buttons {
+        margin-top: 30px;
+    }
+    
+    .blue-cta-buttons .cta-primary,
+    .blue-cta-buttons .cta-secondary {
+        min-width: 160px;
+        padding: 13px 22px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .blue-h3 {
+        font-size: 2.2rem;
+    }
+    
+    .blue-h5 {
+        font-size: 1.2rem;
+    }
+    
+    .blue-container {
+        padding: 3rem 1.5rem;
+    }
+    
+    .blue-service-card {
+        padding: 25px;
+    }
+    
+    .blue-cta-final {
+        padding: 25px 10px;
+        margin-top: 3rem;
+    }
+    
+    .blue-cta-final h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .blue-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 25px;
+    }
+    
+    .blue-cta-buttons .cta-primary,
+    .blue-cta-buttons .cta-secondary {
+        width: 100%;
+        max-width: 280px;
+        min-width: auto;
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .blue-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blue-container {
+        padding: 2rem 1rem;
+    }
+    
+    .blue-h3 {
+        font-size: 1.8rem;
+    }
+    
+    .blue-h5 {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+    
+    .blue-service-card {
+        padding: 20px;
+    }
+    
+    .blue-service-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .blue-service-icon {
+        margin-right: 0;
+    }
+    
+    .blue-cta-final {
+        padding: 20px 8px;
+        margin-top: 2rem;
+        border-radius: 12px;
+    }
+    
+    .blue-cta-final h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .blue-cta-buttons {
+        gap: 12px;
+        margin-top: 20px;
+    }
+    
+    .blue-cta-buttons .cta-primary,
+    .blue-cta-buttons .cta-secondary {
+        max-width: 250px;
+        padding: 12px 18px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .blue-container {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .blue-h3 {
+        font-size: 1.6rem;
+    }
+    
+    .blue-h5 {
+        font-size: 1rem;
+    }
+    
+    .blue-cta-final h3 {
+        font-size: 1.3rem;
+    }
+    
+    .blue-cta-buttons .cta-primary,
+    .blue-cta-buttons .cta-secondary {
+        max-width: 220px;
+        padding: 10px 16px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Animation pour les boutons au chargement */
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blue-cta-buttons .cta-primary,
+.blue-cta-buttons .cta-secondary {
+    animation: buttonFadeIn 0.5s ease-out;
+}
+
+.blue-cta-buttons .cta-secondary {
+    animation-delay: 0.1s;
+}

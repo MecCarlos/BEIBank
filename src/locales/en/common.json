@@ -1,0 +1,19 @@
+{
+  "welcome": "Welcome to BEI",
+  "about": "About us", 
+  "contact": "Contact",
+  "home": "Home",
+  "login": "Login",
+  "signup": "Sign Up",
+
+
+  "first_h4": "Free online account",
+  "first_h1": "Earn up to €760 by using your online account",
+  "first_p_part1": "Earn every day with your account: make a Buzim payment, shop with your card, pay a bill, or receive your salary.",
+  "first_p_highlight": "The more you use it, the more you earn!",
+  "first_p_part2": "Enter your code when opening your account before 01/15/26:",
+  "first_promo_copy": "Copy code BEI447",
+  "first_promo_info": "How it works",
+  "first_cta_primary": "Become a BEI customer",
+  "first_cta_secondary": "Check your online account"
+}

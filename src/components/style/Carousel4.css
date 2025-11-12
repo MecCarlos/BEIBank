@@ -1,0 +1,212 @@
+.carousel4-container {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel4-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.carousel4-h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000080;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.carousel4-h5 {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel4-text-highlight {
+    color: #000080;
+    font-weight: 600;
+}
+
+.carousel4-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel4-promo-card {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.carousel4-promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 128, 0.2);
+}
+
+.carousel4-card-image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.carousel4-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.carousel4-promo-card:hover .carousel4-card-image {
+    transform: scale(1.05);
+}
+
+.carousel4-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+}
+
+.carousel4-text-zone {
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.carousel4-text-zone h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000080;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.carousel4-text-zone p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.carousel4-discover-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 2px solid #000080;
+    color: #000080;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.carousel4-discover-btn:hover {
+    background: #000080;
+    color: white;
+    transform: translateX(5px);
+}
+
+.carousel4-fleche {
+    transition: transform 0.3s ease;
+}
+
+.carousel4-discover-btn:hover .carousel4-fleche {
+    transform: translateX(3px) translateY(-3px);
+}
+
+.carousel4-card-hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 128, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel4-promo-card:hover .carousel4-card-hover-effect {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .carousel4-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .carousel4-h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel4-container {
+        padding: 3rem 1rem;
+    }
+    
+    .carousel4-h3 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel4-h5 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel4-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .carousel4-card-image-container {
+        height: 200px;
+    }
+    
+    .carousel4-text-zone {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel4-container {
+        padding: 2rem 0.5rem;
+    }
+    
+    .carousel4-h3 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel4-h5 {
+        font-size: 1rem;
+    }
+    
+    .carousel4-text-zone h4 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel4-text-zone p {
+        font-size: 0.9rem;
+    }
+    
+    .carousel4-discover-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}

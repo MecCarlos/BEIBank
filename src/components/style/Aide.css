@@ -1,0 +1,442 @@
+/* aide.css */
+
+.aide-container {
+    max-width: 1400px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+    background: transparent;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.aide-container::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 0, 128, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.aide-container::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(74, 74, 255, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* Header */
+.aide-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.aide-main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.1;
+}
+
+.title-accent {
+    color: #000080;
+    position: relative;
+}
+
+.title-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #000080, #4a4aff);
+    border-radius: 2px;
+}
+
+.title-decoration {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #000080, #4a4aff);
+    margin: 0 auto;
+    border-radius: 2px;
+    position: relative;
+}
+
+.title-decoration::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #4a4aff;
+    border-radius: 50%;
+}
+
+/* Grille des cartes */
+.aide-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    align-items: stretch;
+    position: relative;
+    z-index: 2;
+}
+
+/* Carte principale */
+.aide-card {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 10px 30px rgba(0, 0, 128, 0.08);
+    border: 1px solid #e8e8f0;
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    padding: 0;
+}
+
+.aide-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 128, 0.15);
+    border-color: rgba(0, 0, 128, 0.2);
+}
+
+/* Icône en haut */
+.card-icon-top {
+    background: linear-gradient(135deg, #000080, #4a4aff);
+    padding: 2.5rem 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-icon-top::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.aide-card:hover .card-icon-top::before {
+    opacity: 1;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.icon-circle svg {
+    font-size: 2.2rem;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.aide-card:hover .icon-circle {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1) rotate(10deg);
+}
+
+.aide-card:hover .icon-circle svg {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Contenu de la carte */
+.card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.card-header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    line-height: 1.3;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.card-description {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.card-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    text-align: center;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Footer de la carte */
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.stitle-container {
+    text-align: center;
+}
+
+.stitle-badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #000080;
+    background: rgba(0, 0, 128, 0.08);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+/* Bouton aide */
+.aide-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #000080, #4a4aff);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 128, 0.2);
+}
+
+.aide-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 128, 0.3);
+    background: linear-gradient(135deg, #4a4aff, #000080);
+}
+
+.btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.aide-btn:hover .btn-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* Effets de carte */
+.card-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #000080, #4a4aff, #000080) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.aide-card:hover .card-border {
+    opacity: 1;
+}
+
+.card-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+    transform: skewX(-25deg);
+    transition: left 0.8s ease;
+    z-index: 3;
+}
+
+.aide-card:hover .card-shine {
+    left: 150%;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (max-width: 1200px) {
+    .aide-cards-grid {
+        gap: 2rem;
+    }
+    
+    .aide-main-title {
+        font-size: 3rem;
+    }
+    
+    .aide-card {
+        height: 360px;
+    }
+}
+
+@media (max-width: 992px) {
+    .aide-container {
+        padding: 0 1.5rem;
+        margin: 4rem auto;
+        border-radius: 30px;
+    }
+    
+    .aide-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .aide-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .aide-card {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aide-container {
+        padding: 0 1rem;
+        margin: 3rem auto;
+        border-radius: 20px;
+    }
+    
+    .aide-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 1.5rem;
+    }
+    
+    .aide-main-title {
+        font-size: 2.2rem;
+    }
+    
+    .aide-card {
+        height: 340px;
+    }
+    
+    .card-icon-top {
+        padding: 2rem 1.5rem 1rem;
+    }
+    
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-circle svg {
+        font-size: 2rem;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+    }
+    
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aide-container {
+        padding: 0 0.8rem;
+        margin: 2rem auto;
+    }
+    
+    .aide-header {
+        margin-bottom: 3rem;
+    }
+    
+    .aide-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .aide-card {
+        height: 320px;
+    }
+    
+    .card-icon-top {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-circle svg {
+        font-size: 1.8rem;
+    }
+    
+    .card-content {
+        padding: 1.2rem;
+    }
+    
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-description p {
+        font-size: 0.9rem;
+    }
+    
+    .stitle-badge {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .aide-btn {
+        font-size: 0.8rem;
+        padding: 0.7rem 1.2rem;
+    }
+}

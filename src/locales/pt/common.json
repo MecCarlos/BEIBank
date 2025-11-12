@@ -1,0 +1,19 @@
+{
+  "welcome": "Bem-vindo ao BEI",
+  "about": "Sobre nós",
+  "contact": "Contato",
+  "home": "Início",
+  "login": "Entrar",
+  "signup": "Cadastrar",
+  "services": "servizio",
+
+  "first_h4": "Conta online gratuita",
+  "first_h1": "Ganhe até 760 € usando sua conta online",
+  "first_p_part1": "Ganhe todos os dias com sua conta: faça um pagamento Buzim, compre com seu cartão, pague uma fatura ou receba seu salário.",
+  "first_p_highlight": "Quanto mais você usa, mais você ganha!",
+  "first_p_part2": "Insira seu código ao abrir sua conta antes de 15/01/26:",
+  "first_promo_copy": "Copiar código BEI447",
+  "first_promo_info": "Como funciona",
+  "first_cta_primary": "Torne-se cliente BEI",
+  "first_cta_secondary": "Consultar sua conta online"
+}

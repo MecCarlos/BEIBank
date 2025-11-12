@@ -1,0 +1,315 @@
+Couleurs
+:root {
+    --color-navy: #000080; 
+    --color-primary: #007bff; 
+    --color-white: #ffffff;
+    --color-text: #333333;
+}
+
+
+.first-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin-top: -100px;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    position: relative;
+    z-index: 10; 
+}
+/* 2. Colonne de contenu (Texte) */
+.first-content {
+    flex: 1; 
+    max-width: 55%; 
+}
+
+
+.first-h4 {
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    background: rgba(192, 192, 192, 0.425);
+    padding: 1%;
+    font-style: italic;
+    border-radius: 5px;
+    width: 35%;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.first-h1 {
+    color: var(--color-navy);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.first-p {
+    color: var(--color-text);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-highlight {
+    font-weight: 600;
+    color: var(--color-navy);
+    font-style: italic;
+}
+
+/* 4. Zone des codes et infos */
+.first-promo {
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.promo-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--color-navy);
+    font-family: sans-serif;
+    font-size: x-large;
+    font-weight: 400;
+    margin-top: 3%;
+}
+
+.promo-code {
+    font-weight: 400;
+    color: #000080;
+    font-family: sans-serif;
+    font-size: x-large;
+}
+
+.promo-icon-placeholder {
+    /* Style pour l'icône (à adapter si vous utilisez une librairie) */
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+/* 5. Boutons CTA */
+.first-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+
+
+
+/* 1. Base du bouton CTA pour l'effet de remplissage */
+.cta-btn {
+    padding: 1.5rem; 
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px; 
+    transition: all 0.3s ease;
+    white-space: nowrap;
+
+    /* MODIFICATIONS CLÉS POUR L'EFFET DE REMPLISSAGE */
+    position: relative; 
+    overflow: hidden;   
+    z-index: 1; 
+}
+
+.cta-content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Dans votre fichier CSS */
+.cta-btn {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #000080; 
+    background: transparent;
+    color: #000080;
+    padding: 15px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cta-primary {
+    border-color: #007bff;
+    color: white;
+    background: #007bff;
+}
+
+.cta-secondary {
+    border-color: #000080; 
+    color: silver;
+}
+
+.cta-ripple-fill {
+    position: absolute;
+    border-radius: 50%;
+    background: #000080; 
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-primary .cta-ripple-fill {
+    background: #000080;
+    border-color: #000080;
+}
+
+.cta-secondary .cta-ripple-fill {
+    background: #000080;
+}
+
+.cta-content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Changement de couleur du texte pour rester lisible */
+.cta-btn:hover .cta-content-wrapper {
+    color: white;
+    transition: color 0.2s ease 0.1s;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes cta-ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+
+/* Style du bouton SECONDAIRE (Inverse : Blanc avec bordure Navy) */
+.cta-secondary {
+    background: var(--color-white);
+    color: #000080;
+    border: 2px solid #000080;
+}
+
+.cta-secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* 6. Colonne de l'image */
+.first-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 45%; 
+}
+
+.first-img {
+    width: 100%;
+    max-width: 700px; 
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ================================================= */
+/* MEDIA QUERIES (Responsive) */
+/* ================================================= */
+
+@media (max-width: 1300px) {
+    .first-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        /* La marge négative est appliquée uniquement en haut. */
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: none; /* Permet à la marge/padding de contrôler la largeur */
+    }
+
+    .cta-primary {
+    border-color: #007bff;
+    color: white;
+    background: #007bff;
+}
+}
+
+@media (max-width: 992px) {
+    .first-container {
+        flex-direction: column; /* Empilement sur tablette et mobile */
+        gap: 30px;
+    }
+
+    .first-content,
+    .first-image-wrapper {
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .first-h4 {
+        margin-bottom: 1rem;
+        width: 65%;
+        font-size: 0.7rem;
+
+    }
+    .first-h1 {
+        font-size: 2rem; /* Taille plus petite sur mobile */
+        margin-bottom: 1rem;
+    }
+
+    .first-promo,
+    .first-cta-buttons {
+        justify-content: center; 
+    }
+
+    .first-image-wrapper {
+        order: -1; 
+    }
+
+    .promo-item {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+.promo-code {
+    font-weight: bold;
+    font-size: large;
+}
+}
+
+@media (max-width: 576px) {
+    .first-h1 {
+        font-size: 1.6rem;
+    }
+
+    .first-promo {
+        flex-direction: column; 
+    }
+    
+    .cta-btn {
+        width: 100%; /* Boutons pleine largeur */
+        padding: 0.75rem 1rem;
+    }
+}
+
+

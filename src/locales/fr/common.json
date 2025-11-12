@@ -1,0 +1,18 @@
+{
+  "welcome": "Bienvenue sur La BEI",
+  "about": "À propos",
+  "contact": "Contact",
+  "home": "Accueil",
+  "login": "Connexion",
+  "signup": "S'inscrire",
+
+  "first_h4": "compte en ligne sans frais",
+  "first_h1": "Gagner jusqu'a 760 € en utilisant votre compte en ligne",
+  "first_p_part1": "Gagner chaque jour grace a votre comptes: effectuez un paiement Buzim, faites vos achat avec votre carte, paiez unz facture ou recevez votre salaire.",
+  "first_p_highlight": "Plus vous utilisez, plus vous gagner !",
+  "first_p_part2": "Saisisez votre code lors de l'ouverture de votre comptes avant le 15/01/26:",
+  "first_promo_copy": "Copier le code BEI447",
+  "first_promo_info": "Comment ça marche",
+  "first_cta_primary": "Devenez client BEI",
+  "first_cta_secondary": "Consulter votre compte en ligne"
+}

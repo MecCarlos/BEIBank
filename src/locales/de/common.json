@@ -1,0 +1,20 @@
+{
+  "welcome": "Willkommen bei BEI",
+  "about": "Über uns",
+  "contact": "Kontakt",
+  "home": "Startseite",
+  "login": "Anmelden",
+  "signup": "Registrieren",
+  "services": "Dienst",
+
+  "first_h4": "Kostenloses Online-Konto",
+  "first_h1": "Verdienen Sie bis zu 760 € mit Ihrem Online-Konto",
+  "first_p_part1": "Verdienen Sie jeden Tag mit Ihrem Konto: führen Sie eine Buzim-Zahlung durch, kaufen Sie mit Ihrer Karte ein, bezahlen Sie eine Rechnung oder erhalten Sie Ihr Gehalt.",
+  "first_p_highlight": "Je mehr Sie nutzen, desto mehr verdienen Sie!",
+  "first_p_part2": "Geben Sie Ihren Code bei der Eröffnung Ihres Kontos vor dem 15.01.26 ein:",
+  "first_promo_copy": "Code BEI447 kopieren",
+  "first_promo_info": "So funktioniert's",
+  "first_cta_primary": "Werden Sie BEI-Kunde",
+  "first_cta_secondary": "Ihr Online-Konto einsehen"
+
+}

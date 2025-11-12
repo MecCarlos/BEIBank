@@ -1,0 +1,121 @@
+/* Container qui englobe tout */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la vue */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Vidéo en fond - DOIT être positionné ABSOLUTE/FIXED */
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Centre la vidéo */
+    transform: translate(-50%, -50%); 
+    /* Assure que la vidéo couvre tout l'écran */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1; /* Place la vidéo juste en dessous de l'overlay et du contenu */
+}
+
+/* Dégradé noir d'opacité moyenne vers transparent */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Place l'overlay au-dessus de la vidéo */
+    
+    /* Dégradé CSS : du noir semi-transparent (0.6) au noir presque transparent (0.1) */
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.6), /* Opacité moyenne (60%) en haut */
+        rgba(0, 0, 0, 0.1)  
+    );
+}
+
+/* Contenu central (Titre et Animation) */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 100%;
+    z-index: 10; 
+
+}
+
+/* Conteneur pour le texte animé pour l'aligner à droite */
+.animation-box {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; 
+    text-align: left; 
+    padding-left: 50px; 
+    padding-right: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-title {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+}
+
+/* Style de l'animation de texte (le span) */
+.rotating-text {
+    color: white;
+    background: navy; 
+    padding: 5px;
+    font-weight: 600;
+    /* Le curseur clignotant est créé via l'animation ci-dessous */
+    border-right: 3px solid white; 
+    /* Animation pour le curseur */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Animation du curseur clignotant */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+/* Ajustements Topbar (pour s'assurer qu'elle est en haut) */
+.topbar {
+    position: absolute; /* Ou fixed si vous voulez qu'elle reste en haut */
+    top: 0;
+    left: 5%; /* Ajusté pour le 90% de width de la topbar */
+    z-index: 100; /* Assure que le menu est au-dessus de tout le reste */
+}
+
+/* MEDIA QUERIES pour ajuster l'alignement et les tailles sur mobile */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        text-align: center; /* Centrer le texte sur mobile */
+    }
+    
+    .animation-box {
+        text-align: center; /* Centrer le conteneur de texte sur mobile */
+        padding-right: 0;
+        width: 90%;
+    }
+}
