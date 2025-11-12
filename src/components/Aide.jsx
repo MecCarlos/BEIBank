@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ImArrowUpRight2 } from "react-icons/im";
 import { FaMobileAlt, FaUsers, FaLightbulb } from "react-icons/fa";
 // Import du CSS
-import "../components/style/aide.css"; 
+import "../components/style/Aide.css"; 
 
 function Aide() {
     const { t, i18n } = useTranslation();
