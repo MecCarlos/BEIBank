@@ -4,8 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Topbar from './components/Topbar';
 import Home from './Page/Home';
 import Services from './Page/Services';
-
-import Login from './Page/login.jsx';
+import Login from './Page/Login.jsx';
 
 
 function App() {
